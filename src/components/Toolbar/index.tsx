@@ -1,5 +1,6 @@
 import styles from './styles.module.scss'
 import Image from 'next/Image';
+import { Button } from '../Button';
 
 export function Toolbar() {
   return (
@@ -13,6 +14,8 @@ export function Toolbar() {
           <a href="#" className={styles.active}>Home</a>
           <a href="#">Posts</a>
         </nav>
+
+        <Button />
       </div>
     </header>
   )
