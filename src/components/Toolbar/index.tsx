@@ -6,9 +6,11 @@ export function Toolbar() {
   return (
     <header className={styles.toolbarContainer}>
       <div className={styles.toolbarContent}>
-        <img 
+        <Image
           src="/images/logo.svg" 
-          alt="logo" 
+          alt="logo"
+          height={48}
+          width={`100%`}
         />
         <nav>
           <a href="#" className={styles.active}>Home</a>
