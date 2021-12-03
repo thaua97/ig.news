@@ -1,14 +1,15 @@
 import { AppProps } from 'next/app'
 import '../styles/index.scss'
+import { SessionProvider } from "next-auth/react"
 
 import { Toolbar } from '../components/Toolbar';
 
-function MyApp({ Component, pageProps } : AppProps) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
-    <>
-      <Toolbar></Toolbar>
+    <SessionProvider session={session}>
+      <Toolbar />
       <Component {...pageProps} />
-    </>
+    </SessionProvider>
   )
 }
 
